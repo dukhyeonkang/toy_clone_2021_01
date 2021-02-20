@@ -1,6 +1,6 @@
 //Global
 const HOME = "/";
-const JOIN = "/join";
+const JOIN = "/join.pug";
 const LOGIN = "/login";
 const LOGOUT = "/logout";
 const SEARCH = "/search";
