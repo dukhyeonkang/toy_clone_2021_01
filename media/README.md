@@ -3,8 +3,8 @@
 ## Pages
 
 - [ ] Home
-- [ ] Join
-- [ ] Login
+- [x] Join
+- [x] Login
 - [ ] Search
 - [ ] User Detail
 - [ ] Edit Profile

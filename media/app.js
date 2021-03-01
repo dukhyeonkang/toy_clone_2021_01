@@ -9,17 +9,19 @@ import videoRouter from "./routers/videoRouter.js";
 import globalRouter from "./routers/globalRouter.js";
 import routes from "./routes.js";
 
-
-
 const app = express();
 /*const handleListening = (req, res) => console.log(`listening on http://localhost:${PORT}`);
 const handleHome = (req, res) => res.send("Hello from home");
 const handleProfile = (req, res) => res.send("You are on my profile");*/
 
-app.set('view engine', "pug"); // app의 view engine을 바꾸는 작업
+app.use(helmet({ contentSecurityPolicy: false }));
+app.set("view engine", "pug"); // app의 view engine을 바꾸는 작업
+
+app.use("/uploads", express.static("uploads"));
+
 app.use(cookieParser());
 app.use(bodyParser.json());
-app.use(bodyParser.urlencoded({extended: true }));
+app.use(bodyParser.urlencoded({ extended: true }));
 app.use(helmet());
 app.use(morgan("dev"));
 
